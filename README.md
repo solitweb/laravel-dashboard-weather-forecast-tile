@@ -32,6 +32,7 @@ return [
             'open_weather_map_key' => env('OPEN_WEATHER_MAP_KEY'),
             'open_weather_map_city' => 'Antwerp',
             'units' => 'metric', // 'metric' or 'imperial' (metric is default)
+            'locale' => 'en_US',
         ],
     ],
 ];
@@ -55,7 +56,7 @@ In your dashboard view you use the `livewire:weather-forecast-tile` component.
 
 ```html
 <x-dashboard>
-    <livewire:weather-forecast-tile position="a1" />
+  <livewire:weather-forecast-tile position="a1" />
 </x-dashboard>
 ```
 

@@ -17,7 +17,8 @@ class FetchDataFromApiCommand extends Command
         $data = $weatherForecast->getWeatherForecast(
             config('dashboard.tiles.weather_forecast.open_weather_map_key'),
             config('dashboard.tiles.weather_forecast.open_weather_map_city'),
-            config('dashboard.tiles.weather_forecast.units') ?? 'metric'
+            config('dashboard.tiles.weather_forecast.units') ?? 'metric',
+            config('dashboard.tiles.weather_forecast.locale') ?? 'en_US'
         );
 
         WeatherForecastStore::make()->setData($data);
